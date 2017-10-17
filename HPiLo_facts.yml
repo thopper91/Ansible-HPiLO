@@ -1,4 +1,6 @@
-#Created by thopper91(2017)
+# Created by thopper91(2017)
+#
+# Variables will need to be changed based on your environment
 ---
 - hosts: localhost
   vars:
@@ -12,7 +14,7 @@
         login: "{{ iLo_username }}"
         password: "{{ iLo_password }}"
       delegate_to: localhost
-## Not all return values are required, add / remove what is required      
+## Not all return values are required, add / remove what is required
     - debug: var=hw_bios_version #Ouput BIOS version
     - debug: var=hw_product_name # Ouput Product Name
     - debug: var=hw_bios_date # Output BIOS Date

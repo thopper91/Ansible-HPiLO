@@ -1,0 +1,28 @@
+# Created by thopper91(2017)
+#
+# Variables will need to be changed based on your environment
+---
+- hosts: localhost
+  vars:
+    iLo_IP: '0.0.0.0'
+    iLo_username: 'username'
+    iLo_password: 'password'
+    iso_image: 'ISO_URL'
+
+  tasks:
+    - name: Boot the system with an ISO
+      hpilo_boot:
+        host: "{{ iLo_IP }}"
+        login: "{{ iLo_username }}"
+        password: "{{ iLo_password }}"
+        media: cdrom
+        image: "{{ iso_image }}"
+      delegate_to: localhost
+
+    - name: Power off the server
+      hpilo_boot:
+        host: "{{ iLo_IP }}"
+        login: "{{ iLo_username }}"
+        password: "{{ iLo_password }}"
+        state: poweroff
+      delegate_to: localhost
