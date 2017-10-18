@@ -43,7 +43,7 @@ Before going any further, I received help from the Ansible Module website:
 - http://docs.ansible.com/ansible/latest/hpilo_boot_module.html
 
 ## hpilo_facts
-[Ansible YAML file](https://github.com/thopper91/HPiLO/blob/master/HPiLo_facts.yml)
+[Ansible YAML file](../blob/master/HPiLo_facts.yml)
 ```yaml
 ---
 - hosts: localhost
@@ -70,7 +70,7 @@ Before going any further, I received help from the Ansible Module website:
 ```
 
 ## hpilo_boot
-[Ansible YAML file](https://github.com/thopper91/HPiLO/blob/master/HPiLo_boot.yml)
+[Ansible YAML file](../blob/master/HPiLo_boot.yml)
 ```yaml
 ---
 - hosts: localhost
