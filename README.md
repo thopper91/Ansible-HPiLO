@@ -70,7 +70,7 @@ Before going any further, I received help from the Ansible Module website:
 ```
 
 ## hpilo_boot
-[Ansible YAML file](../blob/master/HPiLo_boot.yml)
+[Ansible YAML file](../master/HPiLo_boot.yml)
 ```yaml
 ---
 - hosts: localhost
