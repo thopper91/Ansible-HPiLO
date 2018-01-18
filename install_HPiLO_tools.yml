@@ -1,0 +1,20 @@
+# Created by thopper91(2018)
+#
+---
+- hosts: localhost
+  become: true
+  tasks:
+    - name: Ensure 'pip' is installed
+      command: pip install
+
+    - name: Install Tools using 'apt-get'
+      command: apt-get install {{ item.name }}
+      with_items:
+        - { name: 'libssl-dev' }
+        - { name: 'python python-pip' }
+        - { name: 'python-hpilo' }
+
+    - name: Install tools using 'pip'
+      command: pip install {{ item.name }}
+      with_items:
+        - { name: 'ansible' }
