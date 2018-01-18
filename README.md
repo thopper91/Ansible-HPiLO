@@ -4,39 +4,24 @@ This project is essentially just to show how the modules are used. I will cover:
 2) Show how to use the hpilo_facts module
 3) Show how to use the hpilo_boot module
 
-## Ansible
-```json
-$ sudo apt-get install libssl-dev
-$ sudo pip install ansible
-```
-To check the module has successfully installed and/or just want to see the version number (note, if no version number then module is not installed)
+## Installing modules
+As mentioned above, there are a few modules required for the HPiLO playbooks to work. Instead of doing them manually, I have now created a playbook to do this for you. Simply log into the Ubuntu machine, I am using v17.04, change directory to the one holding the playbooks and execute the following command: 
+
+```$ ansible-playbook install_HPiLO_tools.yml ```
+
+To ensure they have installed successfully, the following command will help
+
+#### For Ansible and python-hpilo modules
 ```json
 $ pip list
 ```
-We are looking for "ansible(version #)"
+We are looking for "ansible(version #)" and "python-hpilo(version #)"
 
-## Python and Pip
-```json
-$ sudo apt-get install python python-pip
-```
-To check the two module versions and if it has been successfully installed (note, if no version number then module is not installed)
+#### For Python and pip modules
 ```json
 $ python --version
 $ pip --version
 ```
-
-## Install HPiLO Python module
-```json
-$ sudo add-apt-repository ppa:dennis/python
-$ sudo apt-get update
-$ sudo apt-get install python-hpilo
-```
-To check the module has successfully installed and/or just want to see the version number (note, if no version number then module is not installed)
-To check version:
-```json
-$ pip list
-```
-We are looking for "python-hpilo(version #)"
 
 Before going any further, I received help from the Ansible Module website:
 - http://docs.ansible.com/ansible/latest/hpilo_facts_module.html
