@@ -1,0 +1,17 @@
+# Created by thopper91(2018)
+#
+---
+- hosts: localhost
+  become: true
+  tasks:
+    - name: Install Curl
+      command: apt-get install curl
+
+    - name: Import the public repository GPG keys
+      shell: curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+
+    - name: Register the Microsoft Ubuntu repository
+      shell: curl https://packages.microsoft.com/config/ubuntu/17.04/prod.list | sudo tee /etc/apt/sources.list.d/microsoft.list
+
+    - name: Install Powershell
+      command: apt-get install -y powershell # -y is the interaction to confirm we want to install the tool. No human interaction
