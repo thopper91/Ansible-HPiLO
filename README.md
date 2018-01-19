@@ -23,7 +23,7 @@ We are looking for "ansible(version #)" and "python-hpilo(version #)"
 $ python --version
 $ pip --version
 ```
-
+### Helpful weblinks
 Before going any further, I received help from the Ansible Module website:
 - http://docs.ansible.com/ansible/latest/hpilo_facts_module.html
 - http://docs.ansible.com/ansible/latest/hpilo_boot_module.html
