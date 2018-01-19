@@ -1,0 +1,22 @@
+# This playbook is created and tested using RedHat Enterprise 7.1
+#
+# It is to install Powershell onto the RedHat Operating System
+#
+# NOTE: 'yum' is used in RHEL, where as 'apt-get' is used in Ubuntu
+#
+---
+- hosts: localhost
+  become: true
+  vars:
+    location: 'hopper/Documents'
+  tasks:
+    - name: Download Powershell file
+      get_url: https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-1.rhel.7.x86_64.rpm
+      dest: /home/{{ location }}/Install_powershell/powershell-6.0.0-1.rhel.7.x86_64.rpm
+
+    - name: Install PowerShell
+      command: yum install -y powershell-6.0.0-1.rhel.7.x86_64.rpm
+      ignore_errors: true
+
+    - name: Delete PowerShell file
+      command: rm powershell-6.0.0-1.rhel.7.x86_64.rpm
