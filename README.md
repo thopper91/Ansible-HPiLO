@@ -28,6 +28,9 @@ Before going any further, I received help from the Ansible Module website:
 - http://docs.ansible.com/ansible/latest/hpilo_facts_module.html
 - http://docs.ansible.com/ansible/latest/hpilo_boot_module.html
 
+Also gained assistance with installing Powershell: 
+- https://github.com/PowerShell/PowerShell/blob/master/docs/installation/linux.md#red-hat-enterprise-linux-rhel-7
+
 ## Playbooks
 - [Install HPiLO Tools](../master/install_HPiLO_tools.yml)
 - [HPiLo_facts Ansible YAML file](../master/HPiLo_facts.yml)
